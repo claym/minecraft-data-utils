@@ -23,7 +23,7 @@ if [ ! -f "$SCRIPTPATH/player2yaml" ]; then
 	exit 1;
 fi
 
-"$SCRIPTPATH/player2yaml" "$FILEARG"|"$PCREGREP" -iM '^(.?id.?:.+$|.?name.?:.+$|type:.+$|Dimension:.+$|filetimestamp:.+$|XpLevel:.+$|Pos:.+\n-.+\n.+\n.+\n)'
+"$SCRIPTPATH/player2yaml" "$FILEARG"|"$PCREGREP" -iM '^(.?id.?:.+$|.?name.?:.+$|type:.+$|Dimension:.+$|filetimestamp:.+$|XpLevel:.+$|SpawnWorld:.+$|Pos:.+\n-.+\n.+\n.+\n)'
 
 E=$?
 if [ $E -ne 0 ]; then
